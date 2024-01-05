@@ -21,7 +21,7 @@ export async function createCat(image, name, desc) {
         productRes = await fetch("https://api.stripe.com/v1/products", catParams),
         data = await productRes.json()
 
-        location.href = "https://peluditos1.vercel.app/gatitos"
+        location.href = "https://peluditos1.vercel.app/gatitos.html"
 
     } catch (err) {
         console.log(err);
