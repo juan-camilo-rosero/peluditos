@@ -25,7 +25,7 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     align-items: center;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif;
 }
 
 html{
@@ -149,7 +149,7 @@ footer img{
     border-radius: 10rem;
     font-size: 1.3rem;
     cursor: pointer;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif;
     transition: .3s;
     text-align: center;
     text-decoration: none;
