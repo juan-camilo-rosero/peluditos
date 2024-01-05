@@ -1,8 +1,9 @@
 import { createCat } from "./stripe_api.js"
-import { showImage, validateInputs } from "./validations.js"
+import { showImage, uploadToImgBB, validateInputs } from "./validations.js"
 
 const d = document,
-$leaveBtn = d.querySelector(".leave")
+$leaveBtn = d.querySelector(".leave"),
+$fileInput = d.getElementById("image")
 
 d.addEventListener("DOMContentLoaded", e => {
     $leaveBtn.addEventListener("click", e => {
@@ -13,6 +14,14 @@ d.addEventListener("DOMContentLoaded", e => {
         }
         else{
             alert(validation);
+        }
+    })
+
+    $fileInput.addEventListener("change", async (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const imageUrl = await uploadToImgBB(file);
+            showImage(".show-image", imageUrl)
         }
     })
     showImage(".show-image", "#image")

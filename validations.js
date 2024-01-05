@@ -1,3 +1,5 @@
+import giphy_keys from "./imgbb_keys.js"
+
 const d = document
 
 export function validateInputs(img, name, desc) {
@@ -18,31 +20,33 @@ export function validateInputs(img, name, desc) {
 }
 
 export function showImage(imgDiv, url) {
-    const $imgDiv = d.querySelector(imgDiv),
-    $url = d.querySelector(url)
+    const $imgDiv = d.querySelector(imgDiv)
 
-    if($url.value !== ""){
-        $imgDiv.innerHTML = `<img src="${$url.value}">`
+    $imgDiv.innerHTML = `<img src="${url}" alt="Tu gatito">`
+}
 
-        const $img = d.querySelector(`${imgDiv} img`)
+export async function uploadToImgBB (image) {
+    const formData = new FormData();
+    formData.append('image', image);
+  
+    try {
+        const response = await fetch(`https://api.imgbb.com/1/upload?key=${giphy_keys.secret}`, {
+          method: 'POST',
+          body: formData
+        });
 
-        $img.addEventListener("error", e => {
-            $imgDiv.innerHTML = `<p>La imagen ingresada es inválida</p>`
-        })
-    }
-    else $imgDiv.innerHTML = ""
-
-    $url.addEventListener("focusout", e => {
-        if($url.value !== ""){
-            $imgDiv.innerHTML = `<img src="${$url.value}">`
+        console.log(response);
     
-            const $img = d.querySelector(`${imgDiv} img`)
-    
-            $img.addEventListener("error", e => {
-                $imgDiv.innerHTML = `<p>La imagen ingresada es inválida</p>`
-            })
+        if (response.ok) {
+          const data = await response.json();
+          const imageUrl = data.data.url;
+          return imageUrl;
+        } else {
+          console.error('Error al subir la imagen:', response.statusText);
+          return null;
         }
-        else $imgDiv.innerHTML = ""
-    })
-
+    } catch (error) {
+        console.error('Error de red:', error);
+        return null;
+    }
 }
