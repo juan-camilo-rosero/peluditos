@@ -21,7 +21,6 @@ export function validateInputs(img, name, desc) {
 
 export function showImage(imgDiv, url) {
     const $imgDiv = d.querySelector(imgDiv)
-
     $imgDiv.innerHTML = `<img src="${url}" alt="Tu gatito">`
 }
 
@@ -49,4 +48,11 @@ export async function uploadToImgBB (image) {
         console.error('Error de red:', error);
         return null;
     }
+}
+
+export function validateAdoptForm(name, email) {
+    const nameRegex = /^[a-zA-Z\s]{2,}$/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  
+    return nameRegex.test(name) && emailRegex.test(email)
 }

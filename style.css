@@ -39,6 +39,7 @@ html{
 .hidden{
     opacity: 0;
     visibility: hidden;
+    height: 0;
 }
 
 .none{
@@ -281,6 +282,72 @@ footer img{
     background-color: var(--primary-color-darker);
 }
 
+#adopt-form{
+    height: 90vh;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    position: fixed;
+    bottom: 0;
+    transition: height .5s ease-in-out;
+}
+
+.adopt-inputs{
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--primary-color);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.adopt-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.adopt-title h2{
+    text-align: center;
+    width: 90vw;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.adopt-input{
+    outline: none;
+    border: var(--secondary-color) solid .2rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 60vw;
+    padding: .5rem 5vw;
+    margin: 1.5rem 0;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.adopt-submit{
+    width: 50vw;
+    padding: .5rem 0;
+    border-radius: 10rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+    transition: .3s;
+    margin-top: 1.5rem;
+}
+
+.adopt-submit:hover{
+    background-color: var(--secondary-color-darker);
+}
+
 /* ******************** Tablet view ******************** */
 
 
@@ -377,6 +444,25 @@ footer img{
         font-size: 1rem;
         font-weight: 600;
     }
+    
+    .adopt-title h2{
+        width: 70vw;
+        font-size: 2.5rem;
+    }
+    
+    .adopt-input{
+        border: var(--secondary-color) solid .3rem;
+        width: 45vw;
+        margin: 2rem 0;
+        font-size: 1.75rem;
+    }
+    
+    .adopt-submit{
+        width: 30vw;
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-top: 2rem;
+    }
 }
 
 
@@ -415,6 +501,10 @@ footer img{
         margin-bottom: 3rem;
     }
 
+    .landing-content{
+        height: 71vh;
+    }
+
     .landing-content a, .leave{
         width: 13vw;
         font-size: 1.25rem;
@@ -425,7 +515,7 @@ footer img{
         width: 15vw;
     }
 
-    /* ******************** Landing page ******************** */
+    /* ******************** Footer ******************** */
 
     footer img{
         height: 10vh;
@@ -498,4 +588,31 @@ footer img{
         width: 12vw;
     }
 
+    .adopt-title{
+        height: 30vh;
+    }
+
+    .adopt-title h2{
+        width: 50vw;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .adopt-inputs{
+        height: 60vh;
+    }
+    
+    .adopt-input{
+        border: var(--secondary-color) solid .3rem;
+        width: 25vw;
+        margin: 1.5rem 0;
+        padding: .4rem 5vw;
+        font-size: 1.4rem;
+    }
+    
+    .adopt-submit{
+        width: 15vw;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
 }

@@ -9,8 +9,7 @@ d.addEventListener("DOMContentLoaded", e => {
     $leaveBtn.addEventListener("click", e => {
         const validation = validateInputs(".show-image img", "#name", "#desc")
         if ( validation === true){
-            console.log("valido :D");
-            createCat("#image", "#name", "#desc")
+            createCat(".show-image img", "#name", "#desc")
         }
         else{
             alert(validation);
