@@ -89,6 +89,7 @@ export async function getCats(catalog) {
 
             d.getElementById("adopt-form").classList.remove("hidden")
             d.querySelector(".adopt-submit").setAttribute("data-product", cat.id)
+            d.querySelector(".adopt-title h2").textContent = `Formulario de adopción para ${cat.name}`
         })
     });
 

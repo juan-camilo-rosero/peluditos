@@ -288,7 +288,7 @@ footer img{
     background-color: var(--secondary-color);
     position: fixed;
     bottom: 0;
-    transition: height .5s ease-in-out;
+    transition: .3s;
 }
 
 .adopt-inputs{
@@ -308,6 +308,26 @@ footer img{
     justify-content: center;
     align-items: center;
     height: 40vh;
+}
+
+.close{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    border: var(--primary-color) solid .2rem;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 12vh;
+    right: 2vh;
+    cursor: pointer;
+}
+
+.close p{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
 }
 
 .adopt-title h2{
@@ -330,6 +350,11 @@ footer img{
     text-align: center;
 }
 
+.adopt-input::placeholder{
+    color: var(--secondary-color);
+    opacity: .75;
+}
+
 .adopt-submit{
     width: 50vw;
     padding: .5rem 0;
@@ -346,6 +371,20 @@ footer img{
 
 .adopt-submit:hover{
     background-color: var(--secondary-color-darker);
+}
+
+/* ******************** Thanks ******************** */
+
+.thanks-section{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.thanks-section p{
+    width: 100vw;
 }
 
 /* ******************** Tablet view ******************** */
@@ -614,5 +653,11 @@ footer img{
         width: 15vw;
         font-size: 1.3rem;
         margin-top: 1.5rem;
+    }
+
+    /* ******************** Thanks ******************** */
+
+    .thanks-section{
+        height: 71vh;
     }
 }
