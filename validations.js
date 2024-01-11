@@ -56,3 +56,21 @@ export function validateAdoptForm(name, email) {
   
     return nameRegex.test(name) && emailRegex.test(email)
 }
+
+export function validateAccountInfo(user, password) {
+    // Verifica si tanto el usuario como la contraseña no están vacíos
+    if (user && password) {
+        // Verifica si el usuario es un correo electrónico válido
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const isEmailValid = emailRegex.test(user);
+
+        // Verifica si la contraseña tiene al menos 6 caracteres
+        const isPasswordValid = password.length >= 6;
+
+        // Retorna true si tanto el usuario como la contraseña son válidos
+        return isEmailValid && isPasswordValid;
+    } else {
+        // Retorna false si el usuario o la contraseña están vacíos
+        return false;
+    }
+}
