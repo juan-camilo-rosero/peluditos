@@ -2,7 +2,7 @@
 
 :root{
     --primary-color: #776B5D;
-    --primary-color-transparent: rgba(119, 107, 93, 0.75);
+    --primary-color-transparent: rgba(0, 0, 0, 0.65);
     --secondary-color: #F3EEEA;
     --primary-color-darker: #53493e;
     --secondary-color-darker: #E0DAD5;
@@ -562,6 +562,52 @@ footer img{
         font-size: 1rem;
     }
 
+    /* ******************** Account ******************** */
+
+    .account-title{
+        width: 60vw;
+    }
+
+    .close-account{
+        right: 22vw;
+    }
+
+    .account-content{
+        width: 60vw;
+    }
+
+    .continue-with-google{
+        width: 40vw;
+    }
+
+    .continue-with-google p{
+        font-size: 1.2rem;
+    }
+
+    .acount-separate{
+        width: 60vw;
+    }
+
+    .acount-separate p{
+        font-size: 1.3rem;
+    }
+
+    .login-form{
+        width: 60vw;
+    }
+
+    .login-form input{
+        width: 30vw;
+        font-size: 1.2rem;
+    }
+
+    .login-btn{
+        margin-top: 1rem;
+        padding: .5rem 7vw;
+        font-size: 1.2rem;
+        border-radius: 5rem;
+    }
+
     /* ******************** Landing page ******************** */
 
     .title{
@@ -678,6 +724,58 @@ footer img{
         height: 1.2rem;
         right: 8.5vw;
         top: 1vh;
+    }
+
+    /* ******************** Account ******************** */
+
+    .account-title{
+        width: 30vw;
+    }
+
+    .close-account{
+        right: 37vw;
+    }
+
+    .close-account p{
+        font-size: 1.1rem;
+    }
+
+    .account-content{
+        width: 30vw;
+        padding: 2rem 0;
+    }
+
+    .continue-with-google{
+        width: 20vw;
+    }
+
+    .continue-with-google p{
+        font-size: 1rem;
+    }
+
+    .acount-separate{
+        width: 30vw;
+    }
+
+    .acount-separate p{
+        font-size: 1.2rem;
+    }
+
+    .login-form{
+        width: 30vw;
+    }
+
+    .login-form input{
+        width: 16vw;
+        padding: .5rem 2vw;
+        font-size: 1.2rem;
+    }
+
+    .login-btn{
+        margin-top: 0;
+        padding: .5rem 2.5vw;
+        font-size: 1.2rem;
+        border-radius: 5rem;
     }
 
     /* ******************** Landing page ******************** */
